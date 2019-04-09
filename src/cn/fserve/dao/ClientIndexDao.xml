@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.fserve.dao.ClientIndexDao">
+
+   <select id="client_select_pet" resultType="cn.fserve.model.Pet">
+		select * from pet where 1=1 limit 12
+   </select>
+   
+   <select id="client_select_life_tool" resultType="cn.fserve.model.LifeTool">
+		select * from life_tool where 1=1 limit 12
+   </select>
+   
+   <select id="client_select_shopping_pet" resultType="cn.fserve.model.PetShopping" parameterType="hashmap">
+        select shopping.*,pet.* from shopping inner join pet on shopping.goods_id=pet.id where goods_id like '${goods_id}%'
+   </select>
+   
+   <select id="client_select_shopping_life_tool" resultType="cn.fserve.model.LifeToolShopping" parameterType="hashmap">
+        select shopping.*,life_tool.* from shopping inner join life_tool on shopping.goods_id=life_tool.id where goods_id like '${goods_id}%'
+   </select>
+   
+   <select id="client_select_all_pet" resultType="cn.fserve.model.Pet">
+		select * from pet
+   </select>
+   
+   <select id="client_select_all_life_tool" resultType="cn.fserve.model.LifeTool">
+		select * from life_tool
+   </select>
+   
+   <select id="client_select_the_encyclopedias" resultType="cn.fserve.model.PetEncyclopedias" parameterType="hashmap">
+        select * from pet_encyclopedias where pet_type = #{pet_type}
+   </select>
+   
+   <select id="client_select_vagrancy_acquiring" resultType="cn.fserve.model.VagrancyAdopt" parameterType="hashmap">
+        select * from vagrancy_adopt where vagrancy_acquiring = #{vagrancy_acquiring}
+   </select>
+   
+   <update id="client_update_vagrancy_acquiring" parameterType="hashmap">
+		update vagrancy_adopt set adopter_id=#{adopter_id},vagrancy_acquiring=#{vagrancy_acquiring} where id=#{id}
+   </update>
+   
+   <select id="client_select_all_dog" resultType="cn.fserve.model.Pet" parameterType="hashmap">
+        select * from pet where pet_category=#{pet_category}
+   </select>
+   
+	
+</mapper>

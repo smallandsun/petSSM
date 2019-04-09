@@ -1,0 +1,50 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+h2{
+	color: mediumslateblue;
+	font-family: "微软雅黑";
+	font-size: 20px;
+	text-align: center;
+}
+.context{
+	width: 100%;
+	height: 1500px;
+	padding-top: 45px;
+	padding-left: 20%;
+	font-family: "微软雅黑";
+	font-size: 17px;
+}
+img{
+	width: 22.3%;
+	height: 250px;
+	border: 1px solid gray;
+}
+.space{
+	width: 10%;
+}
+.context input{
+	width: 200px;
+	height: 25px;
+}
+#submit{
+	font-family: "微软雅黑";
+	font-size: 17px;
+	text-align: center;
+}
+#submit .submit{
+	width: 40px;
+	height: 27px;	
+	background: antiquewhite;
+	border: 1px solid black;
+	border-radius: 5px;
+}
+.encyclopedias{
+	width: 51.5%;
+	height: 200px;
+	margin-left: 98px;
+	position: relative;
+	left: 0;
+	top: -20px;
+}

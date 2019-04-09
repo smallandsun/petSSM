@@ -1,0 +1,26 @@
+.client_bottom_nav{
+	width: 100%;
+	padding-left: 100px;
+	background-color: aqua;
+}
+.client_bottom_nav ul li {
+	/*border-right: 1px solid #808080;*/
+	float: left;
+	height: 200px;
+	line-height: 24px;
+	padding: 28px 0 0 20px;
+	text-align: left;
+	width:170px;
+	font-size: 15px;
+}
+
+.client_bottom_nav ul li a {
+	color: #999;
+	display: block;
+	height: 24px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 85px;
+	font-size: 14px;
+}

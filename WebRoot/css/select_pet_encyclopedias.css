@@ -1,0 +1,43 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+h2{
+	color: mediumslateblue;
+	font-family: "微软雅黑";
+	font-size: 22px;
+	text-align: center;
+}
+.head{
+	width: 100%;
+	height: 30px;
+	font-family: "微软雅黑";
+	font-size: 20px;
+}
+.one,.two{
+	width: 50%;
+	height: 100%;
+	padding-left: 180px;
+	
+}
+.two{
+	position: relative;
+	left: 50%;
+	top: -30px;
+}
+select{
+	width: 200px;
+	height: 30px;
+}
+#submit{
+	font-family: "微软雅黑";
+	font-size: 17px;
+	text-align: center;
+}
+#submit .submit{
+	width: 40px;
+	height: 27px;	
+	background: antiquewhite;
+	border: 1px solid black;
+	border-radius: 5px;
+}

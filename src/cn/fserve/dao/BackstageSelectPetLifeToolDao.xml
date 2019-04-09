@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.fserve.dao.BackstageSelectPetLifeToolDao">
+   
+   <select id="select_pet_life_tool_type" resultType="cn.fserve.model.LifeTool" parameterType="String">
+            select distinct tool_type from life_tool where tool_category=#{tool_category}
+   </select>
+   
+   <select id="select_pet_life_tool_name" resultType="cn.fserve.model.LifeTool" parameterType="String">
+            select distinct tool_name from life_tool where tool_type=#{tool_type}
+   </select>
+   
+   <select id="select_the_pet_life_tool" resultType="cn.fserve.model.LifeTool" parameterType="hashmap">
+		    select * from life_tool
+		    <where>		    
+		          1=1		   
+		          <if test="tool_category !=null and tool_category !=''">
+		              and tool_category = #{tool_category}
+		          </if>	    	    
+		          <if test="tool_type !=null and tool_type !=''">
+		              and tool_type = #{tool_type}
+		          </if> 
+		          <if test="tool_name !=null and tool_name !=''">
+		              and tool_name = #{tool_name}
+		          </if>
+		          <if test="tool_price !=null and tool_price !=''">
+		              and tool_price between #{tool_price} and #{tool_price_x}
+		          </if>
+		   </where>
+   </select>
+   
+   <select id="the_life_tool" resultType="cn.fserve.model.LifeTool" parameterType="hashmap">
+		select * from life_tool where id = #{id}
+   </select>
+   
+   <delete id="delete_the_life_tool" parameterType="java.util.HashMap">
+		delete from life_tool where id=#{id}
+   </delete>
+   
+   <update id="update_the_life_tool" parameterType="hashmap">
+		update life_tool set tool_category=#{tool_category},tool_type=#{tool_type},tool_name=#{tool_name},tool_price=#{tool_price},tool_number=#{tool_number},fit_type=#{fit_type},tool_size=#{tool_size},tool_weight=#{tool_weight},tool_desc=#{tool_desc},tool_img_path=#{tool_img_path}
+		where id=#{id}
+   </update>
+
+</mapper>

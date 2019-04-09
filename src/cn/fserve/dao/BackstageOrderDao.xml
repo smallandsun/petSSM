@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.fserve.dao.BackstageOrderDao">
+
+    <select id="new_order" resultType="cn.fserve.model.Orders" parameterType="String">
+        select orders.*,pet.pet_type,pet.pet_number from orders inner join pet on orders.goods_id=pet.id where send_goods=#{send_goods}
+    </select>
+
+    <update id="update_orders_send_goods" parameterType="hashmap">
+		update orders set send_goods=#{send_goods} where id=#{id}
+    </update>
+    
+    <!-- <select id="the_pet" resultType="cn.fserve.model.Pet" parameterType="hashmap">
+		select * from pet where id = #{id}
+    </select> -->
+   
+   <update id="update_pet_pet_number" parameterType="hashmap">
+		update pet set pet_number=#{pet_number} where id=#{id}
+   </update>
+   
+   <select id="select_the_order" resultType="cn.fserve.model.Orders" parameterType="String">
+		    select orders.*,pet.pet_type from orders inner join pet on orders.goods_id=pet.id
+		    <where>		    
+		          1=1		   
+		          <if test="send_goods !=null and send_goods !=''">
+		              and send_goods = #{send_goods}
+		          </if>	    	    
+		          <if test="acquiring !=null and acquiring !=''">
+		              and acquiring = #{acquiring}
+		          </if> 
+		          <if test="order_number !=null and order_number !=''">
+		              and order_number = #{order_number}
+		          </if>
+		   </where>
+   </select>
+</mapper>

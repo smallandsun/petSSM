@@ -1,0 +1,83 @@
+@charset "utf-8";
+* {
+	font-size: 13px;
+}
+
+.layui-layout-admin {
+	width: 100%;
+	height: 100%;
+}
+
+
+/*顶部内容*/
+
+.top-header {
+	width: 100%;
+	height: 60px;
+	background-color: #23262E;
+	line-height: 60px;
+}
+.top-header .logo{
+	position: absolute;
+	left: 50px;
+	top: 10px;
+	height: 40px;
+}
+.top-title {
+	position: absolute;
+	left: 140px;
+	font-size: 190%;
+	color: #FFFFFF;
+}
+
+.top-header .layui-nav {
+	position: absolute;
+	right: 100px;
+}
+
+
+/*左侧内容*/
+.left-nav .layui-nav-item a {
+	padding: 0 15px;
+}
+
+.left-nav-border-bottom {
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.left-nav-child-child {
+	padding-left: 10px;
+	background-color: #2F4056 !important;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/*右侧内容*/
+.layui-tab{
+	margin: 0 0;
+}
+.right-content {
+	padding-left: 200px;
+}
+
+.right-content .layui-tab-title {
+	background-color: #fff;
+	z-index:999;
+	box-sizing: border-box;
+}
+
+.right-content .right-tab-body {
+	box-sizing: border-box;
+	top: 111px;
+}
+
+.right-content .right-tab-body .layui-main {
+	height: 100%;
+}
+
+
+/*底部内容*/
+
+.footer {
+	text-align: center;
+	line-height: 44px;
+}

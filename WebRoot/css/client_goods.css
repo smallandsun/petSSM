@@ -1,0 +1,77 @@
+.GoodsShow{
+	position: relative;
+	width:100%;
+	background-color: #F2F2F2;
+	margin-top: 20px;
+	float: left;
+}
+.GoodsShow .goodshow{
+	width: 85%;
+	margin: 0 8%;
+}
+.GoodsShow .goods{
+	position: relative;
+	width: 300px;
+	height: 320px;
+	margin: 10px 10px;
+	background-color: white;
+	float: left;
+}
+
+.GoodsShow .goods img{
+	width: 300px;
+	height: 240px;
+	
+}
+.GoodsShow .goods .wenzi{
+	height: 60px;
+	width: 300px;
+	float: left;
+}
+.GoodsShow .goods p{
+	float: left;
+}
+
+.GoodsShow .goods .wenzi .gname{
+	position: absolute;
+	font-size: 15px;
+	font-family: "Î¢ÈíÑÅºÚ";
+	line-height: 35px;
+	width: 170px;
+	height: 80px;
+	left:125px;
+	/* background-color: darkblue; */
+}
+.GoodsShow .goods .wenzi .gscj{
+	position: absolute;
+	font-size: 15px;
+	font-family: "Î¢ÈíÑÅºÚ";	
+	width: 100px;
+	height: 40px;
+	top: 245px;
+	left: 10px;
+	/* background-color: hotpink; */
+}
+
+/*.GoodsShow .goods .wenzi .gjjj{
+	position: absolute;
+	font-size: 18px;
+	font-family: "Î¢ÈíÑÅºÚ";	
+	width: 180px;
+	height: 40px;
+	top: 275px;
+	left: 10px;
+	color: red;
+}*/
+
+/*.GoodsShow .goods .wenzi .gdesc{
+	position: absolute;
+	font-size: 15px;
+	font-family: "Î¢ÈíÑÅºÚ";
+	line-height: 35px;	
+	width: 100px;
+	height: 80px;
+	top: 320px;
+	right: 0px;
+}
+*/

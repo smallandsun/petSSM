@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.fserve.dao.BackstageAddPetDao">
+
+    <insert id="add_the_pet" parameterType="hashmap">
+		insert into
+		pet(pet_category,pet_type,pet_name,pet_price,pet_number,pet_age,pet_shape,pet_food,pet_purpose,pet_weight,pet_sex,pet_marriage,pet_certificate,pet_desc,pet_img_path,admin_user_id)
+		values(#{pet_category},#{pet_type},#{pet_name},#{pet_price},#{pet_number},#{pet_age},#{pet_shape},#{pet_food},#{pet_purpose},#{pet_weight},#{pet_sex},#{pet_marriage},#{pet_certificate},#{pet_desc},#{pet_img_path},#{admin_user_id})
+	</insert>
+
+</mapper>

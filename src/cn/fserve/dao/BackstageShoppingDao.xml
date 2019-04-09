@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.fserve.dao.BackstageShoppingDao">
+
+    <select id="pet_shopping" resultType="cn.fserve.model.PetShopping" parameterType="hashmap">
+		select shopping.*,users.user_name,pet.pet_type from shopping,users,pet
+		where shopping.user_id=users.id and shopping.goods_id=pet.id and shopping.goods_id like '${goods_id}%'
+    </select>
+    
+    <select id="life_tool_shopping" resultType="cn.fserve.model.LifeToolShopping" parameterType="hashmap">
+		select shopping.*,users.user_name,life_tool.tool_name from shopping,users,life_tool
+		where shopping.user_id=users.id and shopping.goods_id=life_tool.id and shopping.goods_id like '${goods_id}%'
+    </select>
+    
+    
+</mapper>

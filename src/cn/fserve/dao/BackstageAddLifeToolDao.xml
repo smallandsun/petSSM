@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.fserve.dao.BackstageAddLifeToolDao">
+
+    <insert id="add_the_life_tool" parameterType="hashmap">
+		insert into
+		life_tool(tool_category,tool_type,tool_name,tool_price,tool_number,fit_type,tool_size,tool_weight,tool_desc,tool_img_path,admin_user_id)
+		values(#{tool_category},#{tool_type},#{tool_name},#{tool_price},#{tool_number},#{fit_type},#{tool_size},#{tool_weight},#{tool_desc},#{tool_img_path},#{admin_user_id})
+	</insert>
+
+</mapper>

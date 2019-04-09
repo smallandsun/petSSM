@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.fserve.dao.BackstageSelectPetDao">
+
+    <select id="select_type" resultType="cn.fserve.model.Pet" parameterType="String">
+            select distinct id,pet_type from pet where pet_category=#{pet_category}
+    </select>
+
+    <select id="select_the_pet" resultType="cn.fserve.model.Pet" parameterType="String">
+		    select * from pet
+		    <where>		    
+		          1=1		   
+		          <if test="pet_category !=null and pet_category !=''">
+		              and pet_category = #{pet_category}
+		          </if>	    	    
+		          <if test="pet_type !=null and pet_type !=''">
+		              and pet_type = #{pet_type}
+		          </if> 
+		          <if test="pet_sex !=null and pet_sex !=''">
+		              and pet_sex = #{pet_sex}
+		          </if>
+		          <if test="pet_shape !=null and pet_shape !=''">
+		              and pet_shape like '${pet_shape}%'
+		          </if> 
+		          <if test="pet_marriage !=null and pet_marriage !=''">
+		              and pet_marriage = #{pet_marriage}
+		          </if>
+		   </where>
+   </select>
+   
+   <select id="the_pet" resultType="cn.fserve.model.Pet" parameterType="hashmap">
+		select * from pet where id = #{id}
+   </select>
+
+   <delete id="delete_the_pet" parameterType="java.util.HashMap">
+		delete from pet where id=#{id}
+   </delete>
+   
+   <update id="update_the_pet" parameterType="hashmap">
+		update pet set pet_category=#{pet_category},pet_category=#{pet_category},pet_type=#{pet_type},pet_name=#{pet_name},pet_price=#{pet_price},pet_number=#{pet_number},pet_age=#{pet_age},pet_shape=#{pet_shape},pet_food=#{pet_food},pet_purpose=#{pet_purpose},pet_weight=#{pet_weight},pet_sex=#{pet_sex},pet_marriage=#{pet_marriage},pet_certificate=#{pet_certificate},pet_desc=#{pet_desc},pet_img_path=#{pet_img_path}
+		where id=#{id}
+   </update>
+
+</mapper>

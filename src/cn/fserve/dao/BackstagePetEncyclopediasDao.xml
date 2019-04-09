@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.fserve.dao.BackstagePetEncyclopediasDao">
+
+    <insert id="add_the_pet_encyclopedias" parameterType="hashmap">
+		insert into
+		pet_encyclopedias(pet_category,pet_type,pet_desc,pet_feed_mode,pet_mpg_ch,pet_life_habits,pet_matters_attention,img_path)
+		values(#{pet_category},#{pet_type},#{pet_desc},#{pet_feed_mode},#{pet_mpg_ch},#{pet_life_habits},#{pet_matters_attention},#{img_path})
+	</insert>
+	
+	<select id="select_pet_type_encyclopedias" resultType="cn.fserve.model.PetEncyclopedias" parameterType="String">
+            select distinct pet_type from pet_encyclopedias where pet_category=#{pet_category}
+    </select>
+    
+    <select id="select_the_pet_encyclopedias" resultType="cn.fserve.model.PetEncyclopedias" parameterType="hashmap">
+		    select * from pet_encyclopedias where pet_category = #{pet_category} and pet_type = #{pet_type}
+    </select>
+    
+    <delete id="delect_pet_encyclopedias" parameterType="java.util.HashMap">
+		delete from pet_encyclopedias where id=#{id}
+    </delete>
+    
+    <select id="select_the_pet_encyclopedias_by_id" resultType="cn.fserve.model.PetEncyclopedias" parameterType="hashmap">
+		select * from pet_encyclopedias where id = #{id}
+    </select>
+    
+    <update id="update_the_pet_encyclopedias" parameterType="hashmap">
+		update pet_encyclopedias set pet_category=#{pet_category},pet_type=#{pet_type},pet_desc=#{pet_desc},pet_feed_mode=#{pet_feed_mode},pet_mpg_ch=#{pet_mpg_ch},pet_life_habits=#{pet_life_habits},pet_matters_attention=#{pet_matters_attention},img_path=#{img_path}
+		where id=#{id}
+   </update>
+
+</mapper>

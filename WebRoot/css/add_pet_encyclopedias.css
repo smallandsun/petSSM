@@ -1,0 +1,73 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+h2{
+	color: mediumslateblue;
+	font-family: "微软雅黑";
+	font-size: 22px;
+	text-align: center;
+}
+.petImg{
+	width: 100%;
+	height: 50px;
+	margin-left: 230px;
+}
+select{
+	width: 200px;
+	height: 25px;
+}
+.space{
+	display:inline-block;
+	width: 23%;
+}
+.category_type{
+	width: 100%;
+	height: 50px;
+	margin-left: 230px;
+}
+input{
+	width: 200px;
+	height: 23px;
+}
+.context{
+	width: 100%;
+	height: 185px;
+	margin-left:230px ;
+	/*background-color: blueviolet;*/
+}
+.textarea{
+	width: 100%;
+	height: 200px;
+	position: relative;
+	left:78px;
+	top:-20px;
+}
+textarea{
+	width: 59%;
+	height: 150px;
+}
+#submit{
+	font-family: "微软雅黑";
+	font-size: 17px;
+	text-align: center;
+}
+#submit .submit{
+	width: 40px;
+	height: 27px;	
+	background: antiquewhite;
+	border: 1px solid black;
+	border-radius: 5px;
+}
+.deleteAndUpdate{
+	text-align: center;
+}
+.button{
+	width: 70px;
+	height: 27px;
+	font-family: "΢���ź�";
+	font-size: 17px;	
+	background: antiquewhite;
+	border: 1px solid black;
+	border-radius: 5px;
+}

@@ -1,0 +1,91 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+h2{
+	color: mediumslateblue;
+	font-family: "微软雅黑";
+	font-size: 22px;
+	text-align: center;
+}
+.selectHead{
+	width: 100%;
+	height: 170px;
+	font-family: "微软雅黑";
+	font-size: 20px;
+	
+	
+}
+.one,.two,.three,.four,.five,.six{
+	width: 33.3%;
+	height: 50px;
+	padding-top: 15px;
+	padding-left: 20px;
+	
+	
+}
+.two{
+	position: absolute;
+	left: 33.3%;
+	top: 0px;
+}
+.three{
+	position: absolute;
+	left: 66.6%;
+	top: 0px;
+	
+}
+.four{
+	position: absolute;
+	left: 0%;
+	
+}
+.five{
+	position: absolute;
+	left: 33.3%;
+	top: 67px;
+}
+.six{
+	position: absolute;
+	left: 66.6%;
+	top: 67px;
+}
+.select{
+	position: absolute;
+	left: 130px;
+	top: 10px;
+	
+}
+.select_life_tool{
+	position: absolute;
+	left: 160px;
+	top: 10px;
+}
+select{
+	width: 200px;
+	height: 30px;
+}
+#button{
+	text-align: center;
+	padding-bottom: 20px;
+}
+.button{
+	width: 50px;
+	height: 25px;
+	
+	
+	background: antiquewhite;
+	border: 1px solid black;
+	border-radius: 5px;
+}
+
+table{
+	width: 100%;
+}
+td,th{
+	border: 1px solid gray;
+}
+.input{
+	width: 200px;
+	height: 22px;
+}

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.fserve.dao.BackstageVagrancyDao">
+
+    <insert id="add_the_vagrancy" parameterType="hashmap">
+		insert into
+		vagrancy_adopt(vagrancy_type,vagrancy_acquiring,vagrancy_desc)
+		values(#{vagrancy_type},#{vagrancy_acquiring},#{vagrancy_desc})
+	</insert>
+	
+	<select id="select_the_vagrancy_one" resultType="cn.fserve.model.VagrancyAdopt" parameterType="hashmap">
+		    select vagrancy_adopt.*,users.user_name from vagrancy_adopt inner join users on vagrancy_adopt.adopter_id=users.id
+		    <where>		    
+		          1=1		   
+		          <if test="vagrancy_acquiring !=null and vagrancy_acquiring !=''">
+		              and vagrancy_acquiring = #{vagrancy_acquiring}
+		          </if> 
+		   </where>
+     </select>
+   
+     <select id="select_the_vagrancy_two" resultType="cn.fserve.model.VagrancyAdopt" parameterType="hashmap">
+		     select * from vagrancy_adopt
+		     <where>		    
+		           1=1		   
+		           <if test="vagrancy_acquiring !=null and vagrancy_acquiring !=''">
+		               and vagrancy_acquiring = #{vagrancy_acquiring}
+		           </if> 
+		    </where>
+    </select>
+   
+    <select id="the_vagrancy_one" resultType="cn.fserve.model.VagrancyAdopt" parameterType="hashmap">
+		 select vagrancy_adopt.*,users.user_name from vagrancy_adopt inner join users on vagrancy_adopt.adopter_id=users.id where vagrancy_adopt.id = #{id}
+    </select>
+    
+    <select id="the_vagrancy_two" resultType="cn.fserve.model.VagrancyAdopt" parameterType="hashmap">
+		 select * from vagrancy_adopt where id = #{id}
+    </select>
+   
+    <delete id="delect_the_vagrancy" parameterType="java.util.HashMap">
+		 delete from vagrancy_adopt where id=#{id}
+    </delete>
+   
+    <update id="update_the_vagrancy" parameterType="hashmap">
+		 update vagrancy_adopt set vagrancy_type=#{vagrancy_type},vagrancy_acquiring=#{vagrancy_acquiring},vagrancy_desc=#{vagrancy_desc}
+		 where id=#{id}
+    </update>
+
+</mapper>

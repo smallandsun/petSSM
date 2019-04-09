@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.fserve.dao.ClientUserDao">
+
+      <insert id="client_user_register" parameterType="hashmap">
+        insert into users(user_email,user_name,user_password)
+        values(#{user_email},#{user_name},#{user_password})
+	  </insert>
+	  
+	  <select id="client_validate_email" resultType="cn.fserve.model.Users" parameterType="hashmap">
+		select user_email from users where user_email = #{user_email}
+      </select>
+      
+      <select id="client_user_login" resultType="cn.fserve.model.Users" parameterType="hashmap">
+		select * from users where user_email = #{user_email} and user_password = #{user_password}
+      </select>
+</mapper>

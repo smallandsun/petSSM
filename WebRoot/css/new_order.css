@@ -1,0 +1,25 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+h2{
+	color: mediumslateblue;
+	font-family: "å¾®è½¯é›…é»‘";
+	font-size: 20px;
+	text-align: center;
+}
+table{
+	width: 100%;
+}
+td,th{
+	border: 1px solid gray;
+}
+input{
+	width: 70px;
+	height: 27px;	
+	border-style: none;
+	font-family: "Î¢ÈíÑÅºÚ";
+	font-size: 17px;
+	color: red;
+}
+
