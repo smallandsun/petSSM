@@ -11,7 +11,7 @@
 <base href="<%=basePath%>">
 
 <meta charset="utf-8">
-<title>宠 物 窝</title>
+<title>宠物窝</title>
 <meta http-equiv="pragma" content="no-cache">
 <meta http-equiv="cache-control" content="no-cache">
 <meta http-equiv="expires" content="0">
