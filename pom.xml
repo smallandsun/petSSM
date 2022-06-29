@@ -23,7 +23,7 @@
 		<!-- slf4j版本号 -->
 		<slf4j.version>1.7.21</slf4j.version>
 		<!-- poi版本号 -->
-		<poi.version>3.16</poi.version>
+		<poi.version>4.1.1</poi.version>
 	</properties>
 
 	<dependencies>
